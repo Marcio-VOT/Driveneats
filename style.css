@@ -3,6 +3,9 @@
 *{
     box-sizing: border-box;
 }
+#prat, #refr, #sobre{
+    color: black;
+}
 .scroll-row::-webkit-scrollbar {
     display: none;
   }
