@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="eats-topo">
@@ -17,21 +18,21 @@
         <div class="prato">
             <h1>Primeiro, seu prato</h1>
             <div class="pedido-prato scroll-row">
-                <div class="pedido-p">
-                    <img src="imagens/prato.png">
-                    <h1>Frango Yin Yang</h1>
-         ''           <h2>Um pouco de batata, um pouco de salada</h2>
-                    <h3>R$ 14,90</h3>
-                </div>
-                
-                <div class="pedido-p">
+                <div id="prato1" class="pedido-p" onclick="prato1()">
                     <img src="imagens/prato.png">
                     <h1>Frango Yin Yang</h1>
                     <h2>Um pouco de batata, um pouco de salada</h2>
                     <h3>R$ 14,90</h3>
                 </div>
                 
-                <div class="pedido-p">
+                <div id="prato2" class="pedido-p" onclick="prato2()">
+                    <img src="imagens/prato.png">
+                    <h1>Frango Yin Yang</h1>
+                    <h2>Um pouco de batata, um pouco de salada</h2>
+                    <h3>R$ 14,90</h3>
+                </div>
+                
+                <div id="prato3" class="pedido-p" onclick="prato3()">
                     <img src="imagens/prato.png">
                     <h1>Frango Yin Yang</h1>
                     <h2>Um pouco de batata, um pouco de salada</h2>
@@ -42,19 +43,19 @@
         <div class="bebida">
             <h1>Agora, sua bebida</h1>
             <div class="pedido-bebida scroll-row">
-                <div class="pedido-b">
+                <div id="bebida1" class="pedido-b" onclick="bebida1()">
                     <img src="imagens/prato.png">
                     <h1>Frango Yin Yang</h1>
                     <h2>Um pouco de batata, um pouco de salada</h2>
                     <h3>R$ 14,90</h3>
                 </div>
-                <div class="pedido-b">
+                <div id="bebida2" class="pedido-b" onclick="bebida2()">
                     <img src="imagens/prato.png">
                     <h1>Frango Yin Yang</h1>
                     <h2>Um pouco de batata, um pouco de salada</h2>
                     <h3>R$ 14,90</h3>
                 </div>
-                <div class="pedido-b">
+                <div id="bebida3" class="pedido-b" onclick="bebida3()">
                     <img src="imagens/prato.png">
                     <h1>Frango Yin Yang</h1>
                     <h2>Um pouco de batata, um pouco de salada</h2>
@@ -65,19 +66,19 @@
         <div class="sobremesa">
             <h1>Por fim, sua sobremesa</h1>
             <div class="pedido-sobremesa scroll-row">
-                <div class="pedido-s">
+                <div id="sobremesa1" class="pedido-s" onclick="sobremesa1()">
                     <img src="imagens/prato.png">
                     <h1>Frango Yin Yang</h1>
                     <h2>Um pouco de batata, um pouco de salada</h2>
                     <h3>R$ 14,90</h3>
                 </div>
-                <div class="pedido-s">
+                <div id="sobremesa3" class="pedido-s" onclick="sobremesa2()">
                     <img src="imagens/prato.png">
                     <h1>Frango Yin Yang</h1>
                     <h2>Um pouco de batata, um pouco de salada</h2>
                     <h3>R$ 14,90</h3>
                 </div>
-                <div class="pedido-s">
+                <div id="sobremesa2" class="pedido-s" onclick="sobremesa3()">
                     <img src="imagens/prato.png">
                     <h1>Frango Yin Yang</h1>
                     <h2>Um pouco de batata, um pouco de salada</h2>
@@ -87,14 +88,23 @@
         </div>
     </div>
     <div class="botao-pedido">
-        <div class="botao-confirma">
+        <div class="botao-confirma" onclick="mudaVerde()">
+            <div>
+                <h1>
+                    Selecione os 3 itens
+                </h1>
+                <h2>
+                    para fechar o pedido
+                </h2>
+            </div>
+    </div>
+    <div class="botao3" onclick="voltaVerde()">
+        <div>
             <h1>
-                Selecione os 3 itens
+                Fechar pedido
             </h1>
-            <h2>
-                para fechar o pedido
-            </h2>
+        </div>
     </div>
-    </div>
+</div>
 </body>
 </html>
