@@ -3,11 +3,7 @@
 *{
     box-sizing: border-box;
 }
-body{
-    display: column;
-    justify-content: center;
-    align-items: center;
-}
+
 #prat, #refr, #sobre{
     color: black;
 }
