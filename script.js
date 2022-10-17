@@ -8,8 +8,6 @@ let pedidoPrato
 let pedidoBebida
 let pedidoSobremesa
 soma = 0;
-
-
 function prato(variavel){
     const check = document.querySelector(".pedido-prato .bordaVerde ")
     if(variavel.classList.contains("bordaVerde") == true){
@@ -19,7 +17,6 @@ function prato(variavel){
         testaPedido();
     }
     else{
-
         if(check !== null){
             check.classList.remove("bordaVerde");
         }
@@ -28,9 +25,7 @@ function prato(variavel){
         valorPrato = document.querySelector(".pedido-prato .bordaVerde #valor").innerHTML;
         valorPrato = valorPrato.replace(",", ".")
         pedidoPrato = document.querySelector(".pedido-prato .bordaVerde #pedido").innerHTML;
-        testaPedido();
-        
-        
+        testaPedido();               
     }
 }
 function bebida(variavel){
@@ -42,7 +37,6 @@ function bebida(variavel){
         testaPedido();
     }
     else{
-
         if(check !== null){
             check.classList.remove("bordaVerde");
         }
@@ -52,12 +46,10 @@ function bebida(variavel){
         valorBebida = valorBebida.replace(",", ".")
         pedidoBebida = document.querySelector(".pedido-bebida .bordaVerde #pedido").innerHTML;
         testaPedido();
-        
     }
 }
 function sobremesa(variavel){
     const check = document.querySelector(".pedido-sobremesa .bordaVerde ")
-    
     if(variavel.classList.contains("bordaVerde") == true){
         variavel.classList.remove("bordaVerde")
         sobremesaa = false;
@@ -65,35 +57,27 @@ function sobremesa(variavel){
         testaPedido();
     }
     else{
-
         if(check !== null){
             check.classList.remove("bordaVerde");
         }
         variavel.classList.add("bordaVerde");
-        
         sobremesaa = true;
         valorSobremesa = document.querySelector(".pedido-sobremesa .bordaVerde #valor").innerHTML;
         valorSobremesa = valorSobremesa.replace(",", ".")
         pedidoSobremesa = document.querySelector(".pedido-sobremesa .bordaVerde #pedido").innerHTML;
-        testaPedido();
-        
+        testaPedido(); 
     }
 }
 function testaPedido(){
     if(pratoa && bebidaa && sobremesaa){
-
         soma = ((+valorBebida)+(+valorPrato)+(+valorSobremesa)).toFixed(2);
         document.getElementById("botao-3").style.display = "none";
         document.getElementById("botao3").style.display = "flex";
-        
     }else{
         soma = ((+valorBebida)+(+valorPrato)+(+valorSobremesa)).toFixed(2);
         document.getElementById("botao-3").style.display = "flex";
         document.getElementById("botao3").style.display = "none";
-        
     }
-
-    
 }
 function pedido(){
     const pedidoo = encodeURIComponent(`Olá, gostaria de fazer o pedido:
