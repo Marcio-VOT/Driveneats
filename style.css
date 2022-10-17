@@ -4,7 +4,13 @@
     box-sizing: border-box;
 }
 /*sla mané*/
-
+.bordaVerde{
+    background-repeat: no-repeat;
+    background-image: url(https://cdn.discordapp.com/attachments/1024803000004391005/1029825092487745636/Vector.png);
+    background-position-x: 93%;
+    background-position-y: 95%;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
+}
 #prat, #refr, #sobre{
     color: black;
 }
@@ -78,6 +84,7 @@
     display: flex;
     width: auto;
     overflow-x: auto;
+    
 }
 .pedido-p{
     display: column;
@@ -85,11 +92,10 @@
     height: 216px;
     background-color: #FFFFFF;
     border-radius: 9px;
-    padding-left: 9px;
-    padding-top: 13px;
+    padding-left: 14px;
+    padding-top: 18px;
     margin-right: 16px;
     padding-right: 14px;
-    border: 5px solid transparent;
     position: relative;
     
     
@@ -154,11 +160,10 @@
     background-color: #FFFFFF;
     filter: drop-shadow(0px 0px 10px -4px rgba(0, 0, 0, 0.25));
     border-radius: 9px;
-    padding-left: 9px;
-    padding-top: 13px;
+    padding-left: 14px;
+    padding-top: 18px;
     margin-right: 16px;
     padding-right: 14px;
-    border: 5px solid transparent;
     position: relative;
 }
 .pedido-b img{
@@ -221,11 +226,10 @@
     background-color: #FFFFFF;
     filter: drop-shadow(0px 0px 10px -4px rgba(0, 0, 0, 0.25));
     border-radius: 9px;
-    padding-left: 9px;
-    padding-top: 13px;
+    padding-left: 14px;
+    padding-top: 18px;
     margin-right: 16px;
     padding-right: 14px;
-    border: 5px solid transparent;
     position: relative;
 }
 .pedido-s img{
