@@ -274,6 +274,9 @@
     width: 100%;
     background-color: #FFFFFF;
 }
+.botao-pedido a{
+    text-decoration: none;
+}
 /*--------------botao-pedidos------------*/
 /*--------------botao-pedidos < 3------------*/
 .botao-confirma{
