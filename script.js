@@ -1,161 +1,90 @@
-function prato1(){
-    if(document.getElementById("prato1").style.borderColor == "green"){
-        document.getElementById("prato1").style.borderColor = "transparent"
-        document.getElementById("prat").style.color = "black"
-        testaPedido();
-    }else{
-
-        document.getElementById("prato1").style.borderColor = "green"
-        document.getElementById("prato2").style.borderColor = "transparent"
-        document.getElementById("prato3").style.borderColor = "transparent"
-        document.getElementById("prat").style.color = "white"
-        testaPedido();
-    }
-}
-function prato2(){
-    if(document.getElementById("prato2").style.borderColor == "green"){
-        document.getElementById("prato2").style.borderColor = "transparent"
-        document.getElementById("prat").style.color = "black"
-        testaPedido();
-    }else{
-
-        document.getElementById("prato2").style.borderColor = "green"
-        document.getElementById("prato3").style.borderColor = "transparent"
-        document.getElementById("prato1").style.borderColor = "transparent"
-        document.getElementById("prat").style.color = "white"
-        testaPedido();
-    }
-}
-function prato3(){
-    if(document.getElementById("prato3").style.borderColor == "green"){
-        document.getElementById("prato3").style.borderColor = "transparent"
-        document.getElementById("prat").style.color = "black"
-        testaPedido();
-    }else{
-
-        document.getElementById("prato3").style.borderColor = "green"
-        document.getElementById("prato2").style.borderColor = "transparent"
-        document.getElementById("prato1").style.borderColor = "transparent"
-        document.getElementById("prat").style.color = "white"
-        testaPedido();
-    }
-}
-//------------------------------------------------------------------------------
-function bebida1(){
-    if(document.getElementById("bebida1").style.borderColor == "green"){
-        document.getElementById("bebida1").style.borderColor = "transparent"
-        document.getElementById("refr").style.color = "black"
-        testaPedido();
-    }else{
-
-        document.getElementById("bebida1").style.borderColor = "green"
-        document.getElementById("bebida2").style.borderColor = "transparent"
-        document.getElementById("bebida3").style.borderColor = "transparent"
-        document.getElementById("refr").style.color = "white"
-        testaPedido();
-    }
-}
-function bebida2(){
-    if(document.getElementById("bebida2").style.borderColor == "green"){
-        document.getElementById("bebida2").style.borderColor = "transparent"
-        document.getElementById("refr").style.color = "black"
-        testaPedido();
-    }else{
-
-        document.getElementById("bebida2").style.borderColor = "green"
-        document.getElementById("bebida1").style.borderColor = "transparent"
-        document.getElementById("bebida3").style.borderColor = "transparent"
-        document.getElementById("refr").style.color = "white"
-        testaPedido();
-    }
-}
-function bebida3(){
-    if(document.getElementById("bebida3").style.borderColor == "green"){
-        document.getElementById("bebida3").style.borderColor = "transparent"
-        document.getElementById("refr").style.color = "black"
-        testaPedido();
-    }else{
-
-        document.getElementById("bebida3").style.borderColor = "green"
-        document.getElementById("bebida2").style.borderColor = "transparent"
-        document.getElementById("bebida1").style.borderColor = "transparent"
-        document.getElementById("refr").style.color = "white"
-        testaPedido();
-    }
-}
-//--------------------------------------------------------------------------------
-function sobremesa1(){
-    if(document.getElementById("sobremesa1").style.borderColor == "green"){
-        document.getElementById("sobremesa1").style.borderColor = "transparent"
-        document.getElementById("sobre").style.color = "black"
+let pratoa = false;
+let bebidaa = false;
+let sobremesaa = false;
+let valorPrato = 0;
+let valorBebida = 0;
+let valorSobremesa = 0;
+let pedidoPrato
+let pedidoBebida
+let pedidoSobremesa
+soma = 0;
+function prato(variavel){
+    const check = document.querySelector(".pedido-prato .bordaVerde ")
+    if(variavel.classList.contains("bordaVerde") == true){
+        variavel.classList.remove("bordaVerde")
+        pratoa = false;
+        valorPrato = 0;
         testaPedido();
     }
     else{
-
-        document.getElementById("sobremesa1").style.borderColor = "green"
-        document.getElementById("sobremesa2").style.borderColor = "transparent"
-        document.getElementById("sobremesa3").style.borderColor = "transparent"
-        document.getElementById("sobre").style.color = "white"
-        testaPedido();
+        if(check !== null){
+            check.classList.remove("bordaVerde");
+        }
+        variavel.classList.add("bordaVerde");
+        pratoa = true;
+        valorPrato = document.querySelector(".pedido-prato .bordaVerde #valor").innerHTML;
+        valorPrato = valorPrato.replace(",", ".")
+        pedidoPrato = document.querySelector(".pedido-prato .bordaVerde #pedido").innerHTML;
+        testaPedido();               
     }
 }
-function sobremesa2(){
-    if(document.getElementById("sobremesa2").style.borderColor == "green"){
-        document.getElementById("sobremesa2").style.borderColor = "transparent"
-        document.getElementById("sobre").style.color = "black"
-        testaPedido();
-    }
-    else{
-    document.getElementById("sobremesa2").style.borderColor = "green"
-    document.getElementById("sobremesa1").style.borderColor = "transparent"
-    document.getElementById("sobremesa3").style.borderColor = "transparent"
-    document.getElementById("sobre").style.color = "white"
-    testaPedido();
-}}
-function sobremesa3(){
-    
-    if(document.getElementById("sobremesa3").style.borderColor == "green"){
-        document.getElementById("sobremesa3").style.borderColor = "transparent"
-        document.getElementById("sobre").style.color = "black"
+function bebida(variavel){
+    const check = document.querySelector(".pedido-bebida .bordaVerde ")
+    if(variavel.classList.contains("bordaVerde") == true){
+        variavel.classList.remove("bordaVerde")
+        bebidaa = false;
+        valorBebida = 0;
         testaPedido();
     }
     else{
-    document.getElementById("sobremesa3").style.borderColor = "green"
-    document.getElementById("sobremesa2").style.borderColor = "transparent"
-    document.getElementById("sobremesa1").style.borderColor = "transparent"
-    document.getElementById("sobre").style.color = "white"
-    testaPedido();
-    
+        if(check !== null){
+            check.classList.remove("bordaVerde");
+        }
+        variavel.classList.add("bordaVerde");
+        bebidaa = true;
+        valorBebida = document.querySelector(".pedido-bebida .bordaVerde #valor").innerHTML;
+        valorBebida = valorBebida.replace(",", ".")
+        pedidoBebida = document.querySelector(".pedido-bebida .bordaVerde #pedido").innerHTML;
+        testaPedido();
+    }
 }
-}
-//-----------------------------------------------------------------------------------
-function testaPRATO(){
-    if(document.getElementById("prat").style.color == "white")
-        return 1;
-    else
-        return 0;
-}
-function testaBEBIDA(){
-    if(document.getElementById("refr").style.color == "white")
-        return 1;
-    else
-        return 0;
-}
-function testaSOBREMESA(){
-    if(document.getElementById("sobre").style.color == "white")
-        return 1;
-    else
-        return 0;
+function sobremesa(variavel){
+    const check = document.querySelector(".pedido-sobremesa .bordaVerde ")
+    if(variavel.classList.contains("bordaVerde") == true){
+        variavel.classList.remove("bordaVerde")
+        sobremesaa = false;
+        valorSobremesa = 0;
+        testaPedido();
+    }
+    else{
+        if(check !== null){
+            check.classList.remove("bordaVerde");
+        }
+        variavel.classList.add("bordaVerde");
+        sobremesaa = true;
+        valorSobremesa = document.querySelector(".pedido-sobremesa .bordaVerde #valor").innerHTML;
+        valorSobremesa = valorSobremesa.replace(",", ".")
+        pedidoSobremesa = document.querySelector(".pedido-sobremesa .bordaVerde #pedido").innerHTML;
+        testaPedido(); 
+    }
 }
 function testaPedido(){
-    if((testaPRATO() == 1)&&(testaBEBIDA()==1)&&(testaSOBREMESA()==1)){
-
+    if(pratoa && bebidaa && sobremesaa){
+        soma = ((+valorBebida)+(+valorPrato)+(+valorSobremesa)).toFixed(2);
         document.getElementById("botao-3").style.display = "none";
         document.getElementById("botao3").style.display = "flex";
     }else{
+        soma = ((+valorBebida)+(+valorPrato)+(+valorSobremesa)).toFixed(2);
         document.getElementById("botao-3").style.display = "flex";
         document.getElementById("botao3").style.display = "none";
     }
-
-    
+}
+function pedido(){
+    const pedidoo = encodeURIComponent(`Olá, gostaria de fazer o pedido:
+- Prato: ${pedidoPrato}
+- Bebida: ${pedidoBebida}
+- Sobremesa: ${pedidoSobremesa}
+Total: R$ ${soma}`)
+    const link = "https://wa.me/5541997892984?text="
+    window.open(link + pedidoo)
 }

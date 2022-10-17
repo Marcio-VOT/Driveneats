@@ -4,9 +4,12 @@
     box-sizing: border-box;
 }
 /*sla mané*/
-
-#prat, #refr, #sobre{
-    color: black;
+.bordaVerde{
+    background-repeat: no-repeat;
+    background-image: url(https://cdn.discordapp.com/attachments/1024803000004391005/1029825092487745636/Vector.png);
+    background-position-x: 93%;
+    background-position-y: 95%;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
 }
 .scroll-row::-webkit-scrollbar {
     display: none;
@@ -15,15 +18,11 @@
   .scroll-row {
     -ms-overflow-style: none;  
 }
-.espaco{
-    width: 16px;
-    height: 1px;
-}
 /*--------------topo------------*/
 .eats-topo {
     background-color: #CF2B2B;
     position: fixed;
-    width: 414px;
+    width: 100%;
     top: 0;
     display: column;
     padding-left: 21px;
@@ -54,7 +53,7 @@
     margin-top: 92px;
     display: column;
     background-color: #E5E5E5;
-    width: 414px;
+    width: 100%;
     padding-left: 19px;
     padding-top: 31px;
     padding-bottom: 108px;
@@ -76,8 +75,8 @@
 }
 .pedido-prato{
     display: flex;
-    width: auto;
     overflow-x: auto;
+    
 }
 .pedido-p{
     display: column;
@@ -85,11 +84,10 @@
     height: 216px;
     background-color: #FFFFFF;
     border-radius: 9px;
-    padding-left: 9px;
-    padding-top: 13px;
+    padding-left: 14px;
+    padding-top: 18px;
     margin-right: 16px;
     padding-right: 14px;
-    border: 5px solid transparent;
     position: relative;
     
     
@@ -154,11 +152,10 @@
     background-color: #FFFFFF;
     filter: drop-shadow(0px 0px 10px -4px rgba(0, 0, 0, 0.25));
     border-radius: 9px;
-    padding-left: 9px;
-    padding-top: 13px;
+    padding-left: 14px;
+    padding-top: 18px;
     margin-right: 16px;
     padding-right: 14px;
-    border: 5px solid transparent;
     position: relative;
 }
 .pedido-b img{
@@ -221,11 +218,10 @@
     background-color: #FFFFFF;
     filter: drop-shadow(0px 0px 10px -4px rgba(0, 0, 0, 0.25));
     border-radius: 9px;
-    padding-left: 9px;
-    padding-top: 13px;
+    padding-left: 14px;
+    padding-top: 18px;
     margin-right: 16px;
     padding-right: 14px;
-    border: 5px solid transparent;
     position: relative;
 }
 .pedido-s img{
@@ -269,6 +265,12 @@
     height: 92px;
     width: 100%;
     background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botao-pedido a{
+    text-decoration: none;
 }
 /*--------------botao-pedidos------------*/
 /*--------------botao-pedidos < 3------------*/
@@ -277,8 +279,7 @@
     width: 364px;
     height: 61px;
     background: #CBCBCB;
-    margin-left: 25px;
-    margin-top: 15px;
+    
     border-radius: 50px;
     justify-content: center;
     align-items: center;
@@ -310,8 +311,6 @@
     width: 364px;
     height: 61px;
     background: #32B72F;
-    margin-left: 25px;
-    margin-top: 15px;
     border-radius: 50px;
     justify-content: center;
     align-items: center;
